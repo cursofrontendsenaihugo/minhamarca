@@ -1,7 +1,10 @@
 :root{
-    --primary-color: #F2F2F2;
-    --secondary-color: #D97218;
-    --primary-bg-color: #001627;
-    --secondary-bg-color: #53D4D0;
-    --third-bg-color: #1EAFAA;
+    --texto-claro: #F2F2F2;
+    --texto-escuro: #001627;
+    --titulo-claro: #004a86;
+    --titulo-escuro: #fcfcfc;
+    --primary-bg-color: #012642;
+    --secondary-bg-color: #adadad;
+    --third-bg-color: #ffffff;
 }
+
