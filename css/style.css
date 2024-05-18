@@ -7,6 +7,10 @@
     --secondary-bg-color: #adadad;
     --third-bg-color: #ffffff;
     --hover-color: rgb(231, 163, 37);
+    --border-color: orangered;
+    --border-color-light: rgb(224, 133, 14);
+
+    --sombra-clara: #fcfcfc;
 }
 
 /* CSS Geral */
@@ -40,7 +44,64 @@ header{
     bottom: 0;
     width: 300px;
     transition: all ease-in-out 0.5s;
-    z-index: 0; /*voltar amanhã */
+    z-index: 99;
     padding: 0 15px;
-    background: var(--primary-bg-color)
+    background: var(--primary-bg-color);
+    overflow-y: auto; /*cria uma barra de rolagem quando o texto e encolhido*/
 }
+
+#header .perfil img{
+    margin: 15px auto;
+    display: block;
+    width: 200px;
+    border: 3px solid var(--border-color-light);
+    box-shadow: 1px 1px 20px 2px rgba(255, 0, 0, 1); /*Projeta a sombra atrás da imagem ou texto*/
+}
+
+#header .perfil h1{
+    font-size: 40px;
+    margin: 25px;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    /* font-family: ; */
+}
+
+/*Caso queira colocar um link
+
+#header .perfil h1 a,
+#header .perfil h1 a:hover{
+    color: ;
+    text-decoration: none; */
+
+.social-links i{
+    font-size: 18px;
+    display: inline-block;
+    background: var(--primary-bg-color);
+    color: var(--texto-claro);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+    box-shadow: 1px 1px 10px 1px var(--titulo-claro);
+}
+
+
+.perfil .social-links a:hover,
+.social-links i:hover{
+    font-size: 18px;
+    display: inline-block;
+    background: var(--primary-bg-color);
+    color: var(--border-color-light);
+    margin-right: 5px;
+    border-radius: 50%;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    box-shadow: 1px 1px 10px 1px var(--titulo-claro);
+}
+
