@@ -9,6 +9,7 @@
     --hover-color: rgb(231, 163, 37);
     --border-color: orangered;
     --border-color-light: rgb(224, 133, 14);
+    --texto-opaco: #81888c;
 
     --sombra-clara: #fcfcfc;
 }
@@ -58,6 +59,15 @@ header{
     box-shadow: 1px 1px 20px 2px rgba(255, 0, 0, 1); /*Projeta a sombra atrás da imagem ou texto*/
 }
 
+
+/*Caso queira colocar um link
+
+#header .perfil h1 a,
+#header .perfil h1 a:hover{
+    color: ;
+    text-decoration: none; */
+
+
 #header .perfil h1{
     font-size: 40px;
     margin: 25px;
@@ -67,21 +77,14 @@ header{
     /* font-family: ; */
 }
 
-/*Caso queira colocar um link
-
-#header .perfil h1 a,
-#header .perfil h1 a:hover{
-    color: ;
-    text-decoration: none; */
-
 .social-links i{
-    font-size: 18px;
+    font-size: 19px;
     display: inline-block;
     background: var(--primary-bg-color);
     color: var(--texto-claro);
     line-height: 1;
     padding: 8px 0;
-    margin-right: 10px;
+    margin-right: 12px;
     border-radius: 50%;
     text-align: center;
     width: 35px;
@@ -93,11 +96,11 @@ header{
 
 .perfil .social-links a:hover,
 .social-links i:hover{
-    font-size: 18px;
+    font-size: 19px;
     display: inline-block;
     background: var(--primary-bg-color);
     color: var(--border-color-light);
-    margin-right: 5px;
+    margin-right: 12px;
     border-radius: 50%;
     text-align: center;
     width: 35px;
@@ -105,3 +108,126 @@ header{
     box-shadow: 1px 1px 10px 1px var(--titulo-claro);
 }
 
+/* ajuste para o corpo principal */
+#main {
+    margin-left: 300px;
+}
+.container,
+.container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+@media (max-width: 1199px) {
+    #header {
+        left: -300px;
+    }
+    #main {
+        margin-left: 0;
+    }
+    .container,
+    .container-fluid {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/** Menu Desktop **/
+.nav-menu {
+    padding: 30px 0 0 0;
+}
+.nav-menu * { 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-menu>ul>li {
+    position: relative;
+    white-space: nowrap;
+}
+
+/*revisão*/
+.nav-menu a,
+.nav-menu:focus {
+    display: flex;
+    align-items: center;
+    color: var(--texto-opaco);
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+.nav-menu a i,
+.nav-menu a:focus i {
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a{
+    text-decoration: none;
+    color: var(--texto-claro);
+}
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i{
+    color: var(--border-color);
+}
+
+/*Menu Mobile*/
+
+.mobile-nav-toggle{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    border: 0;
+    font-size: 26px;
+    transition: all 0.4s;
+    background: var(--border-color);
+    color: var(--texto-escuro);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    cursor: pointer;
+
+}
+
+.mobile-nav-active{
+    overflow: hidden;
+}
+
+.mobile-nav-active #header{
+    left: 0;
+}
+
+
+/* Hero */
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: url("../img/fundo-hero.jpg") bottom center;
+    background-size: cover;
+}
+
+#hero::before{
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#hero .hero-container{
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+}
