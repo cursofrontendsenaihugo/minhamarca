@@ -337,6 +337,10 @@ section{
     color: var(--texto-escuro);
 }
 
+.section-title{
+    padding-bottom: 30px;
+}
+
 .section-title h2{
     font-size: 40px;
     font-weight: bold;
@@ -362,3 +366,67 @@ section{
 }
 
 /** Sobre **/
+
+.sobre .content h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--border-color);
+}
+
+.sobre .content ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sobre .content ul li{
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sobre .content ul li strong{
+    margin-left: 10px;
+}
+
+.sobre .content ul li i{
+    font-size: 16px;
+    color: var(--cor-detalhes);
+    margin-right: 4px;
+    line-height: 0;
+}
+
+/* Conquistas */
+
+.conquistas .count-box{
+    padding: 30px;
+    width: 100%;
+}
+
+.conquistas .count-box i{
+    display: block;
+    font-size: 44px;
+    color: var(--border-color);
+    float: left;
+    line-height: 0;
+}
+
+.conquistas .count-box i:hover{
+    color: var(--cor-detalhes);
+    transition: 0.5s;
+}
+
+.conquistas .count-box span{
+    font-size: 30px;
+    line-height: 40px;
+    display: block;
+    font-weight: 700;
+    color: var(--texto-escuro);
+    margin-left: 60px;
+}
+
+.conquistas .count-box p{
+    padding: 15px 0 0 0;
+    margin: 0 0 0 60px;
+    font-family: "Raleway", sans-serif;
+}
+
