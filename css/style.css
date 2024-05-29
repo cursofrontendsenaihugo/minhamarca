@@ -455,13 +455,13 @@ section{
 
 .skills .progress-bar-bg{
     background: var(--secondary-bg-color);
-    height: 13px;
+    height: 15px;
     border-radius: 6px;
 }
 
 .skills .progress-bar{
     width: 1px;
-    height: 13px;
+    height: 15px;
     transition: 1s;
     background: var(--cor-detalhes);
     border-radius: 6px;
