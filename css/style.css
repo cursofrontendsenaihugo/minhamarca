@@ -167,6 +167,18 @@ header{
     }
 }
 
+@media only screen and (max-width: 480px) {
+    /* Ajuste o seletor conforme necessário para atingir a imagem específica */
+    .hero{
+        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+        height: auto; /* Mantém a proporção da imagem */
+        max-width: 100%; /* Impede que a imagem ultrapasse a largura do dispositivo */
+        display: block; /* Garante que a imagem se comporte corretamente como um bloco */
+        margin: 0 auto; 
+    }}
+
+
+
 /** Menu Desktop **/
 .nav-menu {
     padding: 30px 0 0 0;
@@ -251,6 +263,7 @@ header{
     background-size: cover;
 }
 
+
 #hero::before{
     content: "";
     background: rgba(0, 0, 0, 0.6);
@@ -304,6 +317,15 @@ header{
         font-size: 25px;
     }
 }
+
+@media (max-width: 480px){
+    #hero{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+}}
 
 .email{
     color: var(--texto-escuro);
@@ -802,10 +824,10 @@ section{
     color: var(--cor-detalhes);
 }
 
-.contato .email-form input,
+/* .contato .email-form input,
 .contato .email-form textarea{
-  /*   box-shadow: none; */
-}
+    box-shadow: none;
+} */
 
 .contato .email-form input{
     height: 35px;
@@ -829,39 +851,37 @@ section{
     background: var(--border-color);
     color: var(--cor-branca);
     font-weight: 550px;
+    transition: ease-in-out 0.2s;
 }
 
-#footer{
+#footer {
     padding: 15px;
-    color: var(--cor-branca);
+    color: var(--texto-claro);
+    font-size: 16px;
     position: fixed;
     left: 0;
     bottom: 0;
     z-index: 9999;
-    background: var(--primary-bg-color);
+    background: var(--fundo-menu-lateral);
     width: 300px;
 }
-
-#footer .copyright{
+#footer .copyright {
     text-align: center;
 }
-
-#footer .creditos{
+#footer .creditos {
     padding-top: 5px;
     text-align: center;
     font-size: 13px;
-    color: var(--cor-branca);
+    color: var(--texto-claro);
 }
-
 #footer .creditos a{
     color: var(--cor-detalhes);
 }
-
-#footer .creditos a:hover{
-    color: var(--border-color);
+#footer .creditos a:hover {
+    color: var(--texto-hover);
 }
 
-@media (max-width: 1199) {
+@media (max-width: 1199px) {
     #footer {
         position: static;
         width: auto;
