@@ -232,7 +232,7 @@
      * Portfolio
      * Controle deslizante de detalhes do portfólio
      */
-    new Swiper('.portfolio-detalhes', {
+    new Swiper('.detalhes-slider', {
       speed: 400,
       loop: true,
       autoplay: {
